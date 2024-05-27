@@ -9,17 +9,4 @@ class Post extends Model
 {
     protected $guarded = ['id'];
     use HasFactory;
-
-    public function toSearchableArray(): array
-    {
-        return [
-            'title' => $this->title,
-            'description' => $this->description,
-        ];
-    }
-
-    public static function makeAllSearchable()
-    {
-        self::makeAllSearchable();
-    }
 }
